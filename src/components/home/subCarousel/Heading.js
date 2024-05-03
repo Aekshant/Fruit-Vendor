@@ -1,10 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Heading = ({ handleScroll, scrollStatus }) => {
     const [ buttonDisable, setButtonDisable ] = useState( { 
         left : false,
         right: true
      } )
+
+    useEffect( ()=> {
+        if( 
+            scrollStatus?.scrollLeft === (scrollStatus?.scrollWidth - scrollStatus?.clientWidth)
+         )setButtonDisable( { left : false, right: false }  )
+    }, [scrollStatus] )
     
     const scrollHandler = ( data ) => {
         handleScroll(data)
