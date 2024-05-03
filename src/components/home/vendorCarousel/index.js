@@ -5,7 +5,7 @@ import Heading from './Heading'
 const Index = () => {
   const [ scrollAction, setScrollAction ] = useState(null)
   const handleScroll = (data) => {
-    if(scrollAction) data ? scrollAction.scrollLeft += 100 : scrollAction.scrollLeft -= 100
+    if(scrollAction) data ? scrollAction.scrollLeft += 300 : scrollAction.scrollLeft -= 300
   };
 
   return (

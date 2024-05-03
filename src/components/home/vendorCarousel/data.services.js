@@ -1,63 +1,38 @@
 
 export const apiData = [
   {
-    alt: "Apple",
-    src: './apple.png',
-    name: "Apple"
+    alt: "Balaji Fruits",
+    src: './1.png',
+    name: "Balaji Fruits"
   },
   {
-    alt: "Avakado",
-    src: './avakado.png',
-    name: "Avakado"
+    alt: "Ratan Fruits",
+    src: './2.png',
+    name: "Ratan Fruits"
   },
   {
-    alt: "Grapes",
-    src: './grapes.png',
-    name: "Grapes"
+    alt: "Guru Fruits",
+    src: './3.png',
+    name: "Guru Fruits"
   },
   {
-    alt: "Orange",
-    src: './orange.png',
-    name: "Orange"
+    alt: "Krishna Fruits",
+    src: './1.png',
+    name: "Krishna Fruits"
   },
   {
-    alt: "PineApple",
-    src: './pineApple.png',
-    name: "Pine Apple"
+    alt: "Ratan Fruits",
+    src: './2.png',
+    name: "Ratan Fruits"
   },
   {
-    alt: "Banana",
-    src: './banana.png',
-    name: "Apple"
+    alt: "Guru Fruits",
+    src: './3.png',
+    name: "Guru Fruits"
   },
   {
-    alt: "Strawberry",
-    src: './strawberry.png',
-    name: "Strawberry"
-  },
-  {
-    alt: "Tomato",
-    src: './tomato.png',
-    name: "Tomato"
-  },
-  {
-    alt: "Apple",
-    src: './apple.png',
-    name: "Apple"
-  },
-  {
-    alt: "Avakado",
-    src: './avakado.png',
-    name: "Avakado"
-  },
-  {
-    alt: "Grapes",
-    src: './grapes.png',
-    name: "Grapes"
-  },
-  {
-    alt: "Orange",
-    src: './orange.png',
-    name: "Orange"
+    alt: "Balaji Fruits",
+    src: './1.png',
+    name: "Balaji Fruits"
   },
 ]

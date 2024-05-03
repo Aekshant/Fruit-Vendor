@@ -9,11 +9,13 @@ const Items = ( {scrollAction, setScrollAction } ) => {
   }, [] )
 
   return (
-    <div ref={scrollRef} className='flex mx-14 my-2 text-center no-scrollbar overflow-x-scroll'>
+    <div ref={scrollRef} className='flex mx-4 my-2 text-center no-scrollbar overflow-x-scroll'>
     {
       apiData.map((item, index) => (
         <div key={index} className='m-6 w-full'>
-          <img alt={item.alt} className='object-contain h-20' src={item.src} />
+          <div className='bg-green-400 flex rounded-lg w-60 justify-center cursor-pointer'>
+            <img alt={item.alt} className='object-contain h-44' src={item.src} />
+          </div>
           <h3 className='font-semibold my-2'>{item.name}</h3>
         </div>
       ))
