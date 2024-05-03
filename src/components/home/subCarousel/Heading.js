@@ -1,33 +1,66 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Heading = () => {
+const Heading = ({ handleScroll, scrollStatus }) => {
+    const [ buttonDisable, setButtonDisable ] = useState( { 
+        left : false,
+        right: true
+     } )
+    
+    const scrollHandler = ( data ) => {
+        handleScroll(data)
+        if( 
+            scrollStatus.scrollLeft > 0 && 
+            scrollStatus.scrollLeft === (scrollStatus.scrollWidth - scrollStatus.clientWidth)
+          ){
+            setButtonDisable({ left : true, right: false  })
+        }else if( scrollStatus.scrollLeft > 0 ){
+            setButtonDisable({ left : true, right: true  })
+        }else{
+            setButtonDisable({ left : false, right: true  })
+        }
+    }
+    
     return (
         <div className='flex justify-between text-center'>
             <h1 className='font-bold text-xl'>What's on your mind?</h1>
             <div className='flex space-x-2'>
-                <div className='p-1 bg-gray-300 rounded-2xl cursor-pointer'>
-                    <svg 
+                <div 
+                    className={
+                        buttonDisable.left ? 
+                        'p-1 bg-gray-300 rounded-2xl cursor-pointer hover:bg-gray-400' :
+                        'p-1 bg-gray-300 rounded-2xl'
+                    }
+                    onClick={()=>scrollHandler(0)}
+                    >
+                    <svg
                         xmlns="http://www.w3.org/2000/svg" 
                         fill="none" viewBox="0 0 24 24" 
-                        stroke-width="1.5" stroke="currentColor" 
-                        class="w-6 h-6">
+                        strokeWidth="1.5" stroke="currentColor" 
+                        className="w-6 h-6">
                             <path 
-                                stroke-linecap="round" 
-                                stroke-linejoin="round" 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round" 
                                 d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
                             />
                     </svg>
                 </div>
-                <div className='p-1 bg-gray-300 rounded-2xl cursor-pointer'>
+                <div 
+                    className={
+                        buttonDisable.right ? 
+                        'p-1 bg-gray-300 rounded-2xl cursor-pointer hover:bg-gray-400' :
+                        'p-1 bg-gray-300 rounded-2xl'
+                    }
+                    onClick={()=>scrollHandler(1)}
+                    >
                     <svg 
                         xmlns="http://www.w3.org/2000/svg" 
                         fill="none" viewBox="0 0 24 24" 
-                        stroke-width="1.5" stroke="currentColor" 
-                        class="w-6 h-6"
+                        strokeWidth="1.5" stroke="currentColor" 
+                        className="w-6 h-6"
                     >
                         <path 
-                            stroke-linecap="round" 
-                            stroke-linejoin="round" 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
                             d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
                         />
                     </svg>
