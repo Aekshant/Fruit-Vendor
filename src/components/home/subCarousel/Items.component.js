@@ -9,7 +9,7 @@ const Items = ( {scrollAction, setScrollAction } ) => {
   }, [] )
 
   return (
-    <div ref={scrollRef} className='flex mx-4 my-2 text-center no-scrollbar overflow-x-scroll'>
+    <div ref={scrollRef} className='flex mx-10 my-2 text-center no-scrollbar overflow-x-scroll'>
     {
       apiData.map((item, index) => (
         <div key={index} className='m-6 w-full cursor-pointer'>

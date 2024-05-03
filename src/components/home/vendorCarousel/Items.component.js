@@ -13,7 +13,7 @@ const Items = ( {scrollAction, setScrollAction } ) => {
     {
       apiData.map((item, index) => (
         <div key={index} className='m-6 w-full'>
-          <div className='bg-green-400 flex rounded-lg w-60 justify-center cursor-pointer'>
+          <div className='bg-green-400 flex rounded-lg w-60 justify-center cursor-pointer shadow-xl'>
             <img alt={item.alt} className='object-contain h-44' src={item.src} />
           </div>
           <h3 className='font-semibold my-2'>{item.name}</h3>
