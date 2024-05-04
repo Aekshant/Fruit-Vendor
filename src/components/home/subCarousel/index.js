@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 import Items from "./Items.component"
-import Heading from '../subCarousel/Heading'
+import Heading from './Heading.component'
 const Index = () => {
   const [ scrollAction, setScrollAction ] = useState(null)
   const handleScroll = (data) => {

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 
 import { apiData } from "./data.services"
 
-const Items = ( {scrollAction, setScrollAction } ) => {
+const Items = ( {setScrollAction } ) => {
   const scrollRef = useRef(null)
   useEffect( ()=> {
     setScrollAction(scrollRef.current)
