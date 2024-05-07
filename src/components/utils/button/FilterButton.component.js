@@ -3,7 +3,7 @@ import React from 'react'
 const Filter = () => {
   return (
     <div
-      className='border-gray-400 flex border font-semibold rounded-3xl p-1 items-center text-sm shadow-md'
+      className='border-gray-400 flex border font-semibold rounded-3xl p-1 items-center text-sm shadow-md cursor-pointer'
     >
       <h6 className='text-gray-700 pl-2'>Filter</h6>
       <svg
