@@ -1,9 +1,9 @@
 import React from 'react'
 
 const ItemCard = ( props ) => {
-  const { item, index } = props
+  const { item } = props
   return (
-    <div key={index} className='m-6'>
+    <div className='m-6'>
         <div className='bg-green-400 flex rounded-lg w-full justify-center cursor-pointer shadow-xl p-3'>
           <img alt={item.alt} className='object-contain h-36' src={item.src} />
         </div>

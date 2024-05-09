@@ -9,6 +9,7 @@ import App from './App';
 //component
 const Home = lazy(() => (import("./components/home")))
 const Error = lazy(() => (import("./components/error")))
+const Login = lazy(() => (import("./components/login")))
 
 const appRouter = createBrowserRouter([
   {
@@ -17,6 +18,22 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
+        element: (
+          <Suspense>
+            <Home />
+          </Suspense>
+        )
+      },
+      {
+        path: "/login",
+        element: (
+          <Suspense>
+            <Login />
+          </Suspense>
+        )
+      },
+      {
+        path: "/register",
         element: (
           <Suspense>
             <Home />

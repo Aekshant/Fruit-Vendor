@@ -9,7 +9,7 @@ const index = () => {
             {
                 apiData.map((item, index) => (
                     <ItemCard 
-                        index={index} 
+                        key={index}
                         item={item}
                     />
                 ))
