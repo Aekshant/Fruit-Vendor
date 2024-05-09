@@ -11,8 +11,8 @@ const Login = () => {
           </div>
           <h1 className='font-extrabold text-xl'>____</h1>
         </div>
-        <div className='bg-purple-100 rounded-full p-2 flex w-24 h-24 float-right'>
-          <div className='bg-purple-200 rounded-full px-5 py-4'>
+        <div className='bg-purple-100 rounded-full p-1 flex w-24 h-24 float-right'>
+          <div className='bg-purple-200 rounded-full px-4 py-2'>
             <img alt='tomatoEmoji' src='./tomato.png'/>
           </div>
         </div>
