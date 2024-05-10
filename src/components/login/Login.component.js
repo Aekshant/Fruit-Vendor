@@ -29,8 +29,8 @@ const Login = () => {
         )
       }
       
-      <div className='my-2 mt-10 p-6 bg-orange-500 text-center'>
-        <h1 className='font-semibold text-white text-sm tracking-wider'>LOGIN</h1>
+      <div className='my-2 mt-10 p-6 bg-orange-500 text-center cursor-pointer'>
+        <h1 className='font-semibold text-white text-sm tracking-wider'>{ loginState ? "LOGIN" : "CONTINUE" }</h1>
       </div>
       <div className='text-xs inline'>
         <span className='text-xs inc text-gray-500' >By clicking on Login, I accept the </span>
