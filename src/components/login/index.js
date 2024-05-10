@@ -8,7 +8,6 @@ import { slider } from "../redux/login/profileSlice.redux";
 const Index = () => {
   const dispatch = useDispatch();
   const sliderStatus = useSelector((store) => store.profile.slider);
-  console.log(sliderStatus);
 
   const handleLogin = () => {
     dispatch(slider());

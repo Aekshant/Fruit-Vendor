@@ -1,29 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+import Title from "./Title.component"
+import ValidateInputBox from '../utils/InputBox/ValidateInputBox'
 
 const Login = () => {
+  const [ loginState, setLoginState ] = useState(true)
+
+  const handleLoginState = ( ) => {
+      const currentState = !(loginState)
+      setLoginState( currentState )
+  }
   return (
     <div className='m-7'>
-      <div className='flow-root'>
-        <div className='my-2 float-left'>
-          <h1 className='text-3xl'>Login</h1>
-          <div className='flex mt-2 text-sm'>
-            or <p className='text-[#FDA219] ml-2 font-semibold cursor-pointer'>create an account</p>
+      <Title 
+        title={ loginState ? "Login" : "Sign up" }
+        subTitle={ loginState ? "create an account" : "login to your account" }
+        changeLoginState = {handleLoginState}
+      />
+      { 
+        loginState ? (
+          <ValidateInputBox title="Phone Number" />
+        ) : (
+          <div>
+            <ValidateInputBox title="Phone Number" />
+            <ValidateInputBox title="Name" />
+            <ValidateInputBox title="Email" />
           </div>
-          <h1 className='font-extrabold text-xl'>____</h1>
-        </div>
-        <div className='bg-purple-100 rounded-full p-1 flex w-24 h-24 float-right'>
-          <div className='bg-purple-200 rounded-full px-4 py-2'>
-            <img alt='tomatoEmoji' src='./tomato.png'/>
-          </div>
-        </div>
-        <div>
-        </div>
-      </div>
-      <div className='border-gray-300 border p-2 px-5 my-8'>
-        <p className='text-xs text-gray-500 py-1'>Phone number</p>
-        <input className='focus:outline-none'/>
-      </div>
-      <div className='my-2 p-6 bg-orange-500 text-center'>
+        )
+      }
+      
+      <div className='my-2 mt-10 p-6 bg-orange-500 text-center'>
         <h1 className='font-semibold text-white text-sm tracking-wider'>LOGIN</h1>
       </div>
       <div className='text-xs inline'>
