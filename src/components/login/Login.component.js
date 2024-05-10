@@ -33,7 +33,9 @@ const Login = () => {
         <h1 className='font-semibold text-white text-sm tracking-wider'>{ loginState ? "LOGIN" : "CONTINUE" }</h1>
       </div>
       <div className='text-xs inline'>
-        <span className='text-xs inc text-gray-500' >By clicking on Login, I accept the </span>
+        <span className='text-xs inc text-gray-500' >
+          {loginState ? "By clicking on Login, I accept the ": "By creating an account, I accept the "} 
+        </span>
         <span>Terms & Conditions & Privacy Policy</span>
       </div>
     </div>
