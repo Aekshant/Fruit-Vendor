@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
-import Logo from "./Logo.component";
-import Sign from "./Sign.component";
-import FilterNavComponent from "../home/body/Heading/Index";
-import SearchButton from "../utils/button/SearchButton.component"
+import NavBar from "./NavBar.component";
+import FilerHeaderNav from "./FilterHeaderNav.component";
 
 const Header = () => {
   const [filterActive, setFilter] = useState(false);
@@ -32,22 +30,12 @@ const Header = () => {
     <div
       className={
         "flex justify-between place-items-center h-20 sticky top-0 bg-white " +
-        ( filterActive ? " px-40 " : " px-44 " ) +
+        (filterActive ? " px-40 " : " px-44 ") +
         (sliderStatus ? "" : "z-50")
       }
       id="homeHeader"
     >
-      {filterActive ? (
-        <div className="flex justify-between place-items-center w-full">
-        <FilterNavComponent/>
-        <SearchButton/>
-      </div>
-      ) : (
-        <div className="flex justify-between place-items-center w-full">
-          <Logo />
-          <Sign />
-        </div>
-      )}
+      {filterActive ? <FilerHeaderNav /> : <NavBar />}
     </div>
   );
 };
