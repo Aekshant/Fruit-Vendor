@@ -6,7 +6,7 @@ const Items = ( {scrollAction, setScrollAction } ) => {
   const scrollRef = useRef(null)
   useEffect( ()=> {
     setScrollAction(scrollRef.current)
-  }, [] )
+  } )
 
   return (
     <div ref={scrollRef} className='flex mx-10 my-2 text-center no-scrollbar overflow-x-scroll'>
