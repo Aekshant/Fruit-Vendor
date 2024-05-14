@@ -3,9 +3,12 @@ import React from 'react'
 const Filter = () => {
   return (
     <div
-      className='border-gray-400 flex border font-semibold rounded-3xl p-1 items-center text-sm shadow-md cursor-pointer'
+      className='border-gray-400 
+      flex border font-semibold rounded-3xl p-1 
+      items-center text-sm shadow-md cursor-pointer 
+      hover:text-orange-500 group'
     >
-      <h6 className='text-gray-700 pl-2'>Filter</h6>
+      <h6 className='text-gray-700 pl-2 group-hover:text-orange-500'>Filter</h6>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

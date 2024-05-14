@@ -3,9 +3,9 @@ import React from 'react'
 const Sort = () => {
   return (
     <div
-      className='border-gray-400 cursor-pointer flex border rounded-3xl p-1 items-center text-sm shadow-md mx-3'
+      className='border-gray-400 cursor-pointer flex border rounded-3xl p-1 items-center text-sm shadow-md mx-3 hover:text-orange-500 group'
     >
-        <h6 className='text-gray-700 pl-2 whitespace-nowrap'>Sort By</h6>
+        <h6 className='text-gray-700 pl-2 whitespace-nowrap group-hover:text-orange-500'>Sort By</h6>
         <svg 
             xmlns="http://www.w3.org/2000/svg" 
             fill="none" 

@@ -7,7 +7,7 @@ import FilterCard from "./Card.component"
 
 const Filter = () => {
   return (
-    <div className='flex w-full h-9 my-4'>
+    <div className='flex my-4 h-9'>
         <FilterButton/>
         <SortButton/>
         <FilterCard name={"Fast Delivery"}/>

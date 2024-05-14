@@ -5,7 +5,7 @@ import ItemCard from './ItemCard.component'
 
 const index = () => {
     return (
-        <div className='flex flex-wrap'>
+        <div className='flex flex-wrap' id='filterBody'>
             {
                 apiData.map((item, index) => (
                     <ItemCard 
