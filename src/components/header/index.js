@@ -30,7 +30,7 @@ const Header = () => {
     <div
       className={
         "flex justify-between place-items-center h-20 sticky top-0 bg-white " +
-        (filterActive ? " px-40 " : " px-44 ") +
+        (filterActive ? " shadow-xl px-40 " : " px-44 ") +
         (sliderStatus ? "" : "z-50")
       }
       id="homeHeader"
