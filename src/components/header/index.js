@@ -35,7 +35,7 @@ const Header = () => {
       }
       id="homeHeader"
     >
-      {filterActive ? <FilerHeaderNav /> : <NavBar />}
+      {filterActive ? <div><FilerHeaderNav /></div> : <NavBar />}
     </div>
   );
 };
